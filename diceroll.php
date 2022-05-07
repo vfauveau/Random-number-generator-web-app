@@ -20,11 +20,16 @@ if (isset($_POST['diceRoll1'])):{
         array_push($results, rand(1, $value));
     }
         $sum = array_sum($results);
-        echo "<div class='results'>Your dice roll total is : $sum</div>";
+        echo "<div class='results'>Your total : $sum</div>";
     // for each Dice, shows the detail to the user
     foreach($diceArray as $key => $value){
-        echo "<div>$value $results[$key]</div>" ;
+        echo    "<div class='result-line-wrap'>
+                    <p class='result-line-dice'>$value</p>
+                    <p class='result-line-roll'>$results[$key]</p>
+                </div>" ;
     }
 }
 endif;?>
+<input id="refresh-btn" type="submit" value="Reroll !"/>
 <form method="post" action="index.php"><input class="home-button" type="submit" value="Home"></form>
+<script type="text/javascript" src="index.js"></script>

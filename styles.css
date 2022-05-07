@@ -1,23 +1,77 @@
-html, body {
+html,
+body,
+p {
     margin: 0;
     padding: 0;
 }
-h1{
-    color:darkblue;
+h1 {
+    color: #3a6ea5;
 }
-select{
+select {
     margin: 20px;
-    width: 60px;
+    width: 100px;
     height: 20px;
+    color: black;
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 20em;
+    height: 3em;
+    padding: 0 4em 0 1em;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em,
+        linear-gradient(to left, #ff6700 3em, #3a6ea5 3em);
+    color: white;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
-.home-button{
+.home-button,
+.roll-button,
+#refresh-btn {
+    width: 175px;
     padding: 0.5em;
-    background-color: aliceblue;
-    color: darkslategray;
-    font: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ff6700;
+    color: #ebebeb;
+    font: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     border-radius: 10px;
     margin-top: 20px;
     cursor: pointer;
+}
+.dice-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+select option {
+    color: black;
+}
+select option:focus {
+    outline: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.results {
+    font-size: 20px;
+}
+.result-line-wrap {
+    display: inline-flex;
+}
+.result-line-dice{
+    color: #ff6700;
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+.result-line-roll{
+    color: #3a6ea5;
 }
